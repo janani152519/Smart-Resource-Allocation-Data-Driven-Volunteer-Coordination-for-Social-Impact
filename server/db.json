@@ -1,0 +1,211 @@
+{
+  "helpRequests": [
+    {
+      "id": 1,
+      "type": "request",
+      "lat": 10.963211234152153,
+      "lng": 77.40529238806998,
+      "status": "pending",
+      "title": "Medical Emergency",
+      "description": "Person collapsed, needs immediate medical aid",
+      "urgency": "critical",
+      "time": "2 min ago"
+    },
+    {
+      "id": 2,
+      "type": "request",
+      "lat": 10.963172045198323,
+      "lng": 77.39010447857906,
+      "status": "pending",
+      "title": "Food & Water Needed",
+      "description": "Family of 5 without food for 2 days",
+      "urgency": "high",
+      "time": "8 min ago"
+    },
+    {
+      "id": 3,
+      "type": "request",
+      "lat": 10.969591940524397,
+      "lng": 77.42088761694077,
+      "status": "pending",
+      "title": "Shelter Request",
+      "description": "Elderly couple displaced, needs temporary shelter",
+      "urgency": "medium",
+      "time": "15 min ago"
+    },
+    {
+      "id": 4,
+      "type": "request",
+      "lat": 10.936676467848196,
+      "lng": 77.40278656044987,
+      "status": "pending",
+      "title": "Flood Rescue Needed",
+      "description": "People trapped on rooftop due to flooding",
+      "urgency": "critical",
+      "time": "5 min ago"
+    },
+    {
+      "id": 5,
+      "type": "request",
+      "lat": 10.985074985706389,
+      "lng": 77.41037666732257,
+      "status": "pending",
+      "title": "Medicine Required",
+      "description": "Diabetic patient needs insulin urgently",
+      "urgency": "high",
+      "time": "12 min ago"
+    },
+    {
+      "id": 6,
+      "type": "request",
+      "lat": 10.972527895059317,
+      "lng": 77.40223413670245,
+      "status": "pending",
+      "title": "Transport Assistance",
+      "description": "Pregnant woman needs ride to hospital",
+      "urgency": "high",
+      "time": "20 min ago"
+    },
+    {
+      "id": 7,
+      "type": "request",
+      "lat": 10.970819957314701,
+      "lng": 77.41772724709551,
+      "status": "pending",
+      "title": "Building Collapse",
+      "description": "Partial collapse, people may be trapped",
+      "urgency": "critical",
+      "time": "1 min ago"
+    },
+    {
+      "id": 8,
+      "type": "request",
+      "lat": 10.97271944767644,
+      "lng": 77.44566766573655,
+      "status": "pending",
+      "title": "Power Outage Help",
+      "description": "Hospital backup generator failing",
+      "urgency": "high",
+      "time": "30 min ago"
+    }
+  ],
+  "volunteers": [
+    {
+      "id": 101,
+      "type": "volunteer",
+      "lat": 10.971244494834844,
+      "lng": 77.43042334304738,
+      "status": "available",
+      "title": "Arjun Kumar",
+      "skill": "Medical"
+    },
+    {
+      "id": 102,
+      "type": "volunteer",
+      "lat": 10.96268889413576,
+      "lng": 77.40352317934767,
+      "status": "available",
+      "title": "Priya Sharma",
+      "skill": "Rescue"
+    },
+    {
+      "id": 103,
+      "type": "volunteer",
+      "lat": 10.973446358771422,
+      "lng": 77.42488096216728,
+      "status": "busy",
+      "title": "Rahul Verma",
+      "skill": "Transport"
+    },
+    {
+      "id": 104,
+      "type": "volunteer",
+      "lat": 10.987724562977322,
+      "lng": 77.40919482794828,
+      "status": "available",
+      "title": "Deepa Nair",
+      "skill": "Food Distribution"
+    },
+    {
+      "id": 105,
+      "type": "volunteer",
+      "lat": 10.971500670877473,
+      "lng": 77.38792017301809,
+      "status": "available",
+      "title": "Mohamed Rafi",
+      "skill": "Medical"
+    },
+    {
+      "id": 106,
+      "type": "volunteer",
+      "lat": 10.971971179604694,
+      "lng": 77.43147148749487,
+      "status": "busy",
+      "title": "Kavitha Rajan",
+      "skill": "Counseling"
+    }
+  ],
+  "zones": [
+    {
+      "id": "A",
+      "name": "Zone A — North",
+      "activity": "high",
+      "requests": 45,
+      "color": "#D4A373",
+      "center": {
+        "lat": 10.987596,
+        "lng": 77.43937700000001
+      },
+      "radiusKm": 1.5
+    },
+    {
+      "id": "B",
+      "name": "Zone B — West",
+      "activity": "critical",
+      "requests": 62,
+      "color": "#d4183d",
+      "center": {
+        "lat": 10.952596,
+        "lng": 77.43437700000001
+      },
+      "radiusKm": 2
+    },
+    {
+      "id": "C",
+      "name": "Zone C — East",
+      "activity": "medium",
+      "requests": 38,
+      "color": "#A67B5B",
+      "center": {
+        "lat": 10.982596,
+        "lng": 77.40437700000001
+      },
+      "radiusKm": 1.8
+    },
+    {
+      "id": "D",
+      "name": "Zone D — South",
+      "activity": "high",
+      "requests": 51,
+      "color": "#D4A373",
+      "center": {
+        "lat": 10.957595999999999,
+        "lng": 77.409377
+      },
+      "radiusKm": 1.5
+    },
+    {
+      "id": "E",
+      "name": "Zone E — Central",
+      "activity": "low",
+      "requests": 29,
+      "color": "#8B5A3C",
+      "center": {
+        "lat": 10.997596,
+        "lng": 77.41937700000001
+      },
+      "radiusKm": 1
+    }
+  ],
+  "seeded": true
+}

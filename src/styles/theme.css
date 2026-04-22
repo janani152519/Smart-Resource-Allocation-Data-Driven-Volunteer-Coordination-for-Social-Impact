@@ -1,0 +1,121 @@
+:root {
+  --font-size: 16px;
+  --background: #0A192F; /* Deep Navy Background */
+  --foreground: #E6F1FF; /* Light Blue/White Text */
+  --card: #112240; /* Slightly Lighter Navy for Cards */
+  --card-foreground: #CCD6F6;
+  --popover: #112240;
+  --popover-foreground: #CCD6F6;
+  --primary: #64FFDA; /* Teal/Cyan Accent (standard for dark blue themes) */
+  --primary-foreground: #0A192F;
+  --secondary: #233554;
+  --secondary-foreground: #8892B0;
+  --muted: #233554;
+  --muted-foreground: #8892B0;
+  --accent: #172A45;
+  --accent-foreground: #64FFDA;
+  --destructive: #F75C7E;
+  --destructive-foreground: #FFFFFF;
+  --border: rgba(100, 255, 218, 0.1);
+  --input: rgba(100, 255, 218, 0.05);
+  --input-background: #0A192F;
+  --switch-background: #233554;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #64FFDA;
+  --chart-1: #64FFDA;
+  --chart-2: #3B82F6; /* Blue */
+  --chart-3: #9333EA; /* Purple */
+  --chart-4: #F59E0B; /* Amber */
+  --chart-5: #10B981; /* Emerald */
+  --radius: 0.75rem;
+  --sidebar: #0A192F;
+  --sidebar-foreground: #CCD6F6;
+  --sidebar-primary: #64FFDA;
+  --sidebar-primary-foreground: #0A192F;
+  --sidebar-accent: #112240;
+  --sidebar-accent-foreground: #64FFDA;
+  --sidebar-border: rgba(100, 255, 218, 0.1);
+  --sidebar-ring: #64FFDA;
+
+  /* Urgency colors - Vibrant in dark mode */
+  --emergency: #FF4D4D;
+  --emergency-glow: rgba(255, 77, 77, 0.4);
+  --moderate: #FFB84D;
+  --moderate-glow: rgba(255, 184, 77, 0.4);
+  --normal: #4DFF88;
+  --normal-glow: rgba(77, 255, 136, 0.4);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-emergency: var(--emergency);
+  --color-emergency-glow: var(--emergency-glow);
+  --color-moderate: var(--moderate);
+  --color-moderate-glow: var(--moderate-glow);
+  --color-normal: var(--normal);
+  --color-normal-glow: var(--normal-glow);
+}
+
+@layer base {
+  * {
+    @apply border-border/20 outline-primary/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(100, 255, 218, 0.05) 0, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.05) 0, transparent 50%);
+  }
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-bold text-foreground;
+    letter-spacing: -0.02em;
+  }
+
+  button {
+    @apply font-medium transition-all duration-200;
+  }
+}

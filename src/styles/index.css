@@ -1,0 +1,96 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* Advanced Animations */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-cyan {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(100, 255, 218, 0.4); }
+  50% { box-shadow: 0 0 20px 5px rgba(100, 255, 218, 0.2); }
+}
+
+@keyframes glow-emergency {
+  0%, 100% { box-shadow: 0 0 15px rgba(255, 77, 77, 0.3); border-color: rgba(255, 77, 77, 0.5); }
+  50% { box-shadow: 0 0 40px rgba(255, 77, 77, 0.5); border-color: rgba(255, 77, 77, 0.8); }
+}
+
+@keyframes glow-moderate {
+  0%, 100% { box-shadow: 0 0 15px rgba(255, 184, 77, 0.2); border-color: rgba(255, 184, 77, 0.4); }
+  50% { box-shadow: 0 0 35px rgba(255, 184, 77, 0.4); border-color: rgba(255, 184, 77, 0.7); }
+}
+
+@keyframes glow-normal {
+  0%, 100% { box-shadow: 0 0 15px rgba(77, 255, 136, 0.2); border-color: rgba(77, 255, 136, 0.4); }
+  50% { box-shadow: 0 0 35px rgba(77, 255, 136, 0.4); border-color: rgba(77, 255, 136, 0.7); }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+@keyframes flow-line {
+  0% { stroke-dashoffset: 24; }
+  100% { stroke-dashoffset: 0; }
+}
+
+/* Glassmorphism for Dark Theme */
+.glass-effect {
+  backdrop-filter: blur(16px);
+  background: rgba(17, 34, 64, 0.75);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-card {
+  @apply bg-card/60 backdrop-blur-md border border-white/5;
+}
+
+/* Urgency button styles */
+.btn-emergency { animation: glow-emergency 2s infinite; }
+.btn-moderate { animation: glow-moderate 2.5s infinite; }
+.btn-normal { animation: glow-normal 3s infinite; }
+
+/* Swiggy-style route animation */
+.route-line {
+  stroke-dasharray: 8 4;
+  animation: flow-line 0.5s linear infinite;
+}
+
+/* Data Grid / Scanner effect */
+.data-grid {
+  background-image: linear-gradient(rgba(100, 255, 218, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(100, 255, 218, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* Smooth scrollbar for Dark Theme */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0A192F; }
+::-webkit-scrollbar-thumb { background: #233554; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #64FFDA; }
+
+/* Card hover enhancements */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.01);
+  background: rgba(17, 34, 64, 0.9);
+  border-color: rgba(100, 255, 218, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Chart customizations */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: rgba(100, 255, 218, 0.05);
+}
+
+.recharts-tooltip-wrapper {
+  backdrop-filter: blur(8px);
+}
