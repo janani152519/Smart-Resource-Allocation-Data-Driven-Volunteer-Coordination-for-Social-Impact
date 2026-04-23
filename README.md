@@ -194,32 +194,6 @@ E --> F[Aid Deployment]
 F --> G[Resolution & Learning Feedback]
 ```
 
----
-
-# 📸 MVP Snapshots
-
-## Dashboard
-
-Add screenshot here
-
-```md
-![Dashboard](./assets/dashboard.png)
-```
-
-## Crisis Heatmap
-
-```md
-![Heatmap](./assets/heatmap.png)
-```
-
-## Volunteer Tracking Interface
-
-```md
-![Tracking](./assets/tracking.png)
-```
-
----
-
 # ⚙ Installation
 
 ## Clone Repository
@@ -295,40 +269,12 @@ Supports:
 
 ---
 
-# 🎥 Demo Links
-
-## Live Prototype
-
-```bash
-https://your-demo-link.com
-```
-
-## Working MVP
-
-```bash
-https://your-mvp-link.com
-```
-
-## Demo Video
-
-```bash
-https://youtube.com/your-demo-video
-```
-
-## Presentation Deck
-
-```bash
-https://your-presentation-link.com
-```
-
----
-
 # 👥 Contributors
 
 ## Team The Solutionists
 
 * Janani P — Team Lead
-* Contributors (Add Team Members)
+* Contributors Manoj Vishnu R
 
 ---
 
