@@ -124,8 +124,8 @@ It combines:
 ```mermaid
 graph TD
 A[Users / Distress Requests]
-B[Frontend Platform (React)]
-C[Backend APIs (Express)]
+B["Frontend Platform (React)"]
+C["Backend APIs (Express)"]
 D[GPS & Location Services]
 E[Volunteer Dispatch]
 F[Heatmap Risk Detection]
