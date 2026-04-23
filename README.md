@@ -9,7 +9,7 @@ Turning disaster response from reactive aid into intelligent anticipation.
 </p>
 
 <p align="center">
-  <a href="smart-resource-allocation-data-driven-volunteer-coor-8a06ellad.vercel.app"><strong>🚀 View Live Prototype</strong></a>
+  <a href="https://smart-resource-allocation-data-driven-volunteer-coor-8a06ellad.vercel.app"><strong>🚀 View Live Prototype</strong></a>
 </p>
 
 <p align="center">
