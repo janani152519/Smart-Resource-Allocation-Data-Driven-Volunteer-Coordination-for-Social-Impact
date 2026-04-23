@@ -9,6 +9,10 @@ Turning disaster response from reactive aid into intelligent anticipation.
 </p>
 
 <p align="center">
+  <a href="https://svas-2-0.vercel.app"><strong>🚀 View Live Prototype</strong></a>
+</p>
+
+<p align="center">
 
 ![React](https://img.shields.io/badge/Frontend-React%20%2B%20TypeScript-blue)
 ![Node](https://img.shields.io/badge/Backend-Node.js-green)

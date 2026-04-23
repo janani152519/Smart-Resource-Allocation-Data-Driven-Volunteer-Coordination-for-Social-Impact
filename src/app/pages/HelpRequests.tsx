@@ -21,7 +21,7 @@ export default function HelpRequests() {
 
   const fetchData = async () => {
     try {
-      const res = await fetch('http://localhost:3001/api/requests');
+      const res = await fetch('/api/requests');
       const json = await res.json();
       setData(json);
       setLoading(false);

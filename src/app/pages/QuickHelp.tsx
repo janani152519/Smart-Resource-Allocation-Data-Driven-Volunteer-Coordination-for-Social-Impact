@@ -41,7 +41,7 @@ export default function QuickHelp() {
     if (!gpsLocation) { getGPS(); toast.info('Establishing GPS Link...'); return; }
 
     try {
-      await fetch('http://localhost:3001/api/requests', {
+      await fetch('/api/requests', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -67,7 +67,7 @@ export default function QuickHelp() {
     if (!gpsLocation) { getGPS(); toast.info('Awaiting GPS Lock...'); return; }
 
     try {
-      await fetch('http://localhost:3001/api/requests', {
+      await fetch('/api/requests', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

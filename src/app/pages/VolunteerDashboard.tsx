@@ -32,7 +32,7 @@ export default function VolunteerDashboard() {
 
   const handleAcceptRequest = async (req: any) => {
     try {
-      await fetch(`http://localhost:3001/api/requests/${req.id}`, {
+      await fetch(`/api/requests/${req.id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -66,7 +66,7 @@ export default function VolunteerDashboard() {
   const handleSignalArrival = async () => {
     if (!trackingRequest) return;
     try {
-      await fetch(`http://localhost:3001/api/requests/${trackingRequest.id}`, {
+      await fetch(`/api/requests/${trackingRequest.id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status: 'completed' })
@@ -93,7 +93,7 @@ export default function VolunteerDashboard() {
 
   const fetchRequests = async () => {
     try {
-      const res = await fetch('http://localhost:3001/api/requests');
+      const res = await fetch('/api/requests');
       setRequests(await res.json());
     } catch (e) { console.error(e); }
   };

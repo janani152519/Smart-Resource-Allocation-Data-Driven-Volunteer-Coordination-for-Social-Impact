@@ -370,14 +370,18 @@ app.get('/api/updates', (req, res) => {
 });
 
 // ─── Start Server ──────────────────────────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log(`\n  🚀 SVAS Backend API running at http://localhost:${PORT}`);
-  console.log(`  📡 Endpoints:`);
-  console.log(`     POST /api/seed         — Seed data around GPS location`);
-  console.log(`     GET  /api/map-data     — All map data (requests, volunteers, zones)`);
-  console.log(`     GET  /api/requests     — Help requests`);
-  console.log(`     POST /api/requests     — Create new request`);
-  console.log(`     GET  /api/volunteers   — Volunteers`);
-  console.log(`     GET  /api/zones        — Zones`);
-  console.log(`     GET  /api/updates      — Live updates\n`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`\n  🚀 SVAS Backend API running at http://localhost:${PORT}`);
+    console.log(`  📡 Endpoints:`);
+    console.log(`     POST /api/seed         — Seed data around GPS location`);
+    console.log(`     GET  /api/map-data     — All map data (requests, volunteers, zones)`);
+    console.log(`     GET  /api/requests     — Help requests`);
+    console.log(`     POST /api/requests     — Create new request`);
+    console.log(`     GET  /api/volunteers   — Volunteers`);
+    console.log(`     GET  /api/zones        — Zones`);
+    console.log(`     GET  /api/updates      — Live updates\n`);
+  });
+}
+
+export default app;
