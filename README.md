@@ -274,7 +274,7 @@ Supports:
 ## Team The Solutionists
 
 * Janani P — Team Lead
-* Contributors Manoj Vishnu R
+* Contributors — Manoj Vishnu R
 
 ---
 
