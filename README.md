@@ -12,8 +12,8 @@ Turning disaster response from reactive aid into intelligent anticipation.
 
 ![React](https://img.shields.io/badge/Frontend-React%20%2B%20TypeScript-blue)
 ![Node](https://img.shields.io/badge/Backend-Node.js-green)
-![Gemini](https://img.shields.io/badge/AI-Google%20Gemini-orange)
 ![Vite](https://img.shields.io/badge/Build-Vite-purple)
+![Tailwind](https://img.shields.io/badge/Styling-Tailwind%20CSS-38B2AC)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![Hackathon](https://img.shields.io/badge/Built%20For-Google%20Solution%20Challenge-red)
 
@@ -49,19 +49,17 @@ It combines:
 
 * Real-time weather and hazard signals
 * Crowd-generated incident reports
-* Geospatial intelligence
-* AI-powered volunteer matching
+* Geospatial intelligence and Heatmap clustering
 * Smart escalation workflows
 * Offline/SMS support for low-network regions
 
 ## What It Does
 
-✔ Predicts risks before escalation
+✔ Predicts risks before escalation using dynamic zone mapping
 ✔ Prepositions aid and volunteers intelligently
-✔ Matches responders dynamically using AI
 ✔ Connects citizens, NGOs, hospitals and authorities
 ✔ Escalates unresolved requests across multiple levels
-✔ Learns continuously from past response outcomes
+✔ Provides live GPS tracking and resource repositioning
 
 ---
 
@@ -70,15 +68,15 @@ It combines:
 | Traditional Systems         | SVAS 2.0                          |
 | --------------------------- | --------------------------------- |
 | Reactive response           | Predictive response               |
-| Manual volunteer assignment | AI dynamic matching               |
-| Static resource allocation  | Adaptive repositioning            |
+| Manual volunteer assignment | Dynamic, location-based matching  |
+| Static resource allocation  | Adaptive repositioning via zones  |
 | Limited coordination        | Unified emergency ecosystem       |
 | One-level escalation        | Multi-tier intelligent escalation |
-| Basic reporting             | Self-learning crisis intelligence |
+| Basic reporting             | Real-time heatmap intelligence    |
 
 ### USP
 
-> A self-learning, predictive humanitarian response platform that deploys help intelligently at every scale — even offline.
+> A location-aware, predictive humanitarian response platform that deploys help intelligently at every scale.
 
 ---
 
@@ -88,15 +86,13 @@ It combines:
 
 | Feature                         | Description                                                          |
 | ------------------------------- | -------------------------------------------------------------------- |
-| Predictive Risk Intelligence    | Forecasts risk zones before emergencies escalate                     |
-| AI Smart Matching               | Assigns optimal volunteers based on speed, trust and success history |
-| Dynamic Resource Repositioning  | Automatically shifts idle resources to demand hotspots               |
-| Self-Learning Reputation Engine | Improves volunteer reliability scoring over time                     |
-| Smart Escalation Engine         | Escalates Volunteer → Team → NGO → Emergency Services                |
-| Crowd Intelligence Mapping      | Uses live reports and crowdsourced signals                           |
-| Heatmap + Cluster AI            | Detects crisis hotspots and prioritizes response                     |
-| Offline & SMS Support           | Operates in low-bandwidth environments                               |
+| Predictive Risk Intelligence    | Forecasts risk zones based on incident concentration                 |
+| Dynamic Resource Repositioning  | Automatically visualizes and shifts resources to demand hotspots     |
+| Real-time Crisis Maps           | GPS-driven interactive Leaflet maps with live incident tracking      |
+| Heatmap + Cluster AI            | Detects crisis hotspots and prioritizes response via visual layers   |
 | Live Volunteer Tracking         | Monitors mission movement in real time                               |
+| Smart Escalation Engine         | Escalates Volunteer → Team → NGO → Emergency Services                |
+| Premium "Cyber Blue" UI         | High-fidelity dark mode dashboards using Tailwind & Framer Motion    |
 
 ---
 
@@ -104,40 +100,22 @@ It combines:
 
 ## Multi-Layer System Architecture
 
-### 1. Frontend Layer
+### 1. Frontend Layer (React + Vite)
+* Citizen Request Portal
+* Volunteer Dashboard
+* Real-time Crisis Map (Leaflet)
+* Data visualization (Recharts)
 
-* Citizen request portal
-* Volunteer dashboard
-* NGO control panel
-* Real-time crisis map
-
-### 2. Backend/API Layer
-
+### 2. Backend/API Layer (Node.js + Express)
 * Request routing engine
-* Resource management services
+* GPS-based dynamic data seeding
 * Real-time updates APIs
-* Escalation workflow logic
+* Local JSON persistent storage (`db.json`)
 
-### 3. AI Intelligence Layer
-
-* Risk prediction models
-* Volunteer matching engine
-* Heatmap clustering analysis
-* Self-learning decision optimization
-
-### 4. Data Sources
-
-* Weather APIs
-* Geolocation services
-* Crowd reports
-* Emergency response data
-
-### 5. Response Execution Layer
-
-* Volunteer deployment
-* NGO escalation
-* Hospital routing
-* Emergency authority escalation
+### 3. Intelligence & Mapping Layer
+* Real-time user geolocation tracking
+* Radius-based incident mapping and zone generation
+* Geospatial heatmaps
 
 ---
 
@@ -146,13 +124,12 @@ It combines:
 ```mermaid
 graph TD
 A[Users / Distress Requests]
-B[Frontend Platform]
-C[Backend APIs]
-D[AI Prediction Engine]
-E[Volunteer Matching]
+B[Frontend Platform (React)]
+C[Backend APIs (Express)]
+D[GPS & Location Services]
+E[Volunteer Dispatch]
 F[Heatmap Risk Detection]
 G[Escalation Engine]
-H[NGOs/Hospitals/Emergency Services]
 
 A --> B
 B --> C
@@ -161,73 +138,85 @@ D --> E
 D --> F
 E --> G
 F --> G
-G --> H
 ```
 
 ---
 
 # 🛠 Tech Stack
 
-| Layer       | Technologies                |
-| ----------- | --------------------------- |
-| Frontend    | React, TypeScript           |
-| Build Tool  | Vite                        |
-| Styling     | Tailwind CSS, Framer Motion |
-| Maps        | Leaflet, React Leaflet      |
-| Analytics   | Recharts                    |
-| Backend     | Node.js, Express            |
-| APIs        | REST APIs                   |
-| AI Services | Google Gemini               |
-| Deployment  | Cloud Deployment            |
+| Layer       | Technologies                                   |
+| ----------- | ---------------------------------------------- |
+| Frontend    | React, TypeScript, Vite                        |
+| Styling     | Tailwind CSS, Framer Motion, Shadcn UI, MUI    |
+| Maps        | Leaflet, React Leaflet, Leaflet.heat           |
+| Analytics   | Recharts                                       |
+| Backend     | Node.js, Express, CORS                         |
+| Data Store  | Local File-based JSON Database (`db.json`)     |
 
 ---
 
-# 🔄 Workflow / Process Flow
-
-```mermaid
-flowchart LR
-A[Distress Signal] --> B[Risk Detection]
-B --> C[AI Volunteer Matching]
-C --> D[Resource Allocation]
-D --> E[Escalation Engine]
-E --> F[Aid Deployment]
-F --> G[Resolution & Learning Feedback]
-```
-
 # ⚙ Installation
 
-## Clone Repository
+## 1. Clone Repository
 
 ```bash
-git clone https://github.com/your-username/svas-2.0.git
-cd svas-2.0
+git clone https://github.com/janani152519/Smart-Resource-Allocation-Data-Driven-Volunteer-Coordination-for-Social-Impact.git
+cd Smart-Resource-Allocation-Data-Driven-Volunteer-Coordination-for-Social-Impact
 ```
 
-## Install Frontend
+## 2. Install Dependencies & Run
+The project uses `concurrently` to run both the React frontend and Express backend with a single command.
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Start Backend
-
-```bash
-cd server
-npm install
-npm start
-```
+The application will be available at:
+* **Frontend:** `http://localhost:5173`
+* **Backend API:** `http://localhost:3001`
 
 ---
 
 # 🔌 API Endpoints
 
-| Endpoint  | Purpose                      |
-| --------- | ---------------------------- |
-| /seed     | Initial data setup           |
-| /map-data | Crisis map and location data |
-| /requests | Incoming help requests       |
-| /updates  | Real-time status updates     |
+The Express backend runs on port 3001 and provides the following RESTful endpoints:
+
+| Endpoint              | Method   | Purpose                                           |
+| --------------------- | -------- | ------------------------------------------------- |
+| `/api/seed`           | `POST`   | Seed realistic data around user's GPS coordinates |
+| `/api/map-data`       | `GET`    | Fetch all incidents, volunteers, and zones        |
+| `/api/requests`       | `GET`    | Fetch all active help requests                    |
+| `/api/requests`       | `POST`   | Create a new help or SOS request                  |
+| `/api/requests/:id`   | `PATCH`  | Update the status/helper of an existing request   |
+| `/api/volunteers`     | `GET`    | Fetch all registered volunteers                   |
+| `/api/zones`          | `GET`    | Fetch current crisis zone activity data           |
+| `/api/updates`        | `GET`    | Fetch the 5 most recent live feed updates         |
+
+---
+
+# 📂 Repository Structure
+
+```bash
+SVAS-2.0/
+│
+├── src/                 # React Frontend Code
+│   ├── app/
+│   │   ├── components/  # UI components (Maps, Modals, Shadcn)
+│   │   ├── pages/       # Dashboard, Help, and Request views
+│   │   ├── App.tsx      # Main Layout
+│   │   └── routes.ts    # Application Routing
+│   ├── styles/          # Global styles and Tailwind configs
+│   └── main.tsx         # React Entry Point
+│
+├── server/              # Node.js Backend Code
+│   ├── server.js        # Express API definitions & Data Logic
+│   └── db.json          # Persistent file-based data store
+│
+├── package.json         # Root dependencies and Concurrent Scripts
+├── vite.config.ts       # Vite configuration
+└── README.md            # Project Documentation
+```
 
 ---
 
@@ -235,15 +224,11 @@ npm start
 
 SVAS 2.0 roadmap includes:
 
-## Planned Innovations
-
-* Digital twins for disaster simulation
-* Federated AI risk models
+* Integration of Federated AI risk models and Google Gemini
 * Drone-assisted supply routing
-* Satellite-driven hazard prediction
 * Multilingual voice emergency agents
-* Autonomous aid recommendation engines
-* Blockchain-backed relief transparency
+* Transition from JSON file-based storage to a scalable Cloud Database (e.g., MongoDB/PostgreSQL)
+* WebSockets (Socket.io) for instantaneous push updates
 
 ---
 
@@ -254,13 +239,11 @@ SVAS 2.0 contributes toward resilient communities by:
 * Reducing emergency response delays
 * Increasing equitable aid distribution
 * Strengthening community-led crisis coordination
-* Supporting underserved low-connectivity regions
 * Enabling scalable humanitarian intelligence
 
 ## UN SDG Alignment
 
 Supports:
-
 * SDG 3 — Good Health and Well-being
 * SDG 9 — Industry, Innovation and Infrastructure
 * SDG 11 — Sustainable Cities and Communities
@@ -273,49 +256,14 @@ Supports:
 
 ## Team The Solutionists
 
-* Janani P — Team Lead
-* Contributors — Manoj Vishnu R
-
----
-
-# 📂 Repository Structure
-
-```bash
-SVAS-2.0/
-│
-├── client/
-│   ├── components/
-│   ├── pages/
-│   └── services/
-│
-├── server/
-│   ├── routes/
-│   ├── controllers/
-│   └── models/
-│
-├── assets/
-├── docs/
-└── README.md
-```
+* **Janani P** — Team Lead
+* **Manoj Vishnu R** — Contributor
 
 ---
 
 # 🔐 License
 
 Licensed under the MIT License.
-
-```text
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files...
-```
-
----
-
-# 🤝 Why This Matters
-
-Disaster response should not begin after suffering starts.
-
-SVAS 2.0 reimagines humanitarian coordination as an intelligent system that predicts, prioritizes, and deploys support before communities are overwhelmed.
 
 ---
 
@@ -327,15 +275,8 @@ If you find this project meaningful:
 * Fork and contribute 🍴
 * Share feedback 💡
 
----
-
-## Closing Note
-
 > **Building intelligent humanitarian systems for resilient communities.**
-
----
 
 <p align="center">
 Made with impact-driven innovation for social good.
 </p>
-
